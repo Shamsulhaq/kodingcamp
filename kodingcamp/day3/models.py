@@ -12,6 +12,9 @@ class UserProfileBasic(models.Model):
     gravatar = models.CharField(max_length=100)
     guid = models.CharField(max_length=40)
 
+    def __str__(self):
+        return self.name
+
 
 class PersonalProfile(models.Model):
     user_profile_basic_id = models.OneToOneField(UserProfileBasic, null=True,
