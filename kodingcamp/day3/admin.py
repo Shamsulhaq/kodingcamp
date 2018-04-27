@@ -1,6 +1,13 @@
 from django.contrib import admin
-from .models import UserProfileBasic, PersonalProfile
+from .models import UserProfileBasic, PersonalProfile, OrganizationProfile, \
+                    EventBasic, EventDetail, EventTrainer, EventParticipant, \
+                    PersonalRecommendation, JobBasic, JobDetail, JobApplicant, \
+                    Interest
 
-# Register your models here.
-admin.site.register(UserProfileBasic)
-admin.site.register(PersonalProfile)
+all_models = [UserProfileBasic, PersonalProfile, OrganizationProfile,
+              EventBasic, EventDetail, EventTrainer, EventParticipant,
+              PersonalRecommendation, JobBasic, JobDetail, JobApplicant,
+              Interest]
+
+
+admin.site.register(all_models)
